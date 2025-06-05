@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="header">
+    <div>
+        <h1 class="logo"><a href="/">HorizonVertical</a></h1>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#principle">Principle</a></li>
+            <li><a href="#notification">Notification</a></li>
+        </ul>
+    </div>
+<div class="main">
+    <div id="about">
+        <h2>About</h2>
+        <p>
+            HorizonVertical is an organization for alumni and alumnea of RyukokuHorizon.
+        </p>
+    </div>
+    <div id="principle">
+        <h2>Principle</h2>
+        <p>HorizonVertical upholds three key principles.</p>
+        <h3>Mission</h3>
+        <p><strong>To foster co-creation through horizontal and vertical connections.</strong><br>By bringing together people who share common interests, and combining their unique personalities and skills regardless of age, experience, or position, we create an environment where we can take on exciting and new challenges.</p>
+        <h3>Vision</h3>
+        <p><strong>To be an organization we can be proud of—both to our loved ones and to ourselves—and to continue being so.</strong><br>A group that is so meaningful and appealing that you can proudly say to your family, friends, and your future self, 'I am a part of this organization.</p>
+        <h3>Value</h3>
+        <p><strong>Hyogeru – We embrace creativity and expressiveness with playfulness and boldness.</strong><br>Follow your heart without conforming to fixed forms, and freely pursue your own sense of 'suki'—your passions—or your ideals. And through taking on interesting challenges, cultivate your own sense of 'iki'—refined style and spirit.<br><strong>Mutual Support – We believe in give-and-take relationships, where everyone helps and is helped in turn.</strong>Rather than a one-sided relationship of dependence, we value a bond where both sides give and receive freely—an open, mutually beneficial give-and-take.</p>
+    </div>
+    <div id="notification">
+        <h2>Notification</h2>
+        <p><a href="{{ get_url(path='@/notification/_index.md') }}">Check notifications</a>.</p>
+    </div>
+</div>
+<div class="footer">
+    <h2>Contact and Links</h2>
+    <h3>HorizonVertical</h3>
+    <li><a href="https://www.horizonvertical.org">Homepage</a></li>
+    <li><a href="mailto:contact@horizonvertical.org">Send email</a></li>
+    <li><a href="https:github.com/HorizonVertical">GitHub Organization</a></li>
+    <h3>RyukokuHorizon</h3>
+    <li><a href="https://www.ryukokuhorizon.dev">Homepage</a></li>
+    <li><a href="https://github.com/ryukoku-horizon">GitHub Organization</a></li>
+</div>
+{% endblock content %}
