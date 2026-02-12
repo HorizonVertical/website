@@ -1,54 +1,120 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="header">
-    <div>
-        <h1 class="logo"><a href="/">HorizonVertical</a></h1>
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">HorizonVertical</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#principle">Principle</a></li>
+      <li><a href="#notification">Notification</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>HorizonVertical</h1>
+    <p>Fostering co-creation through horizontal and vertical connections. An organization for alumni of RyukokuHorizon.</p>
+  </div>
+  <div class="scroll-indicator">
+    <span></span>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>About</h2>
+      <p>HorizonVertical is an organization for alumni and alumnae of RyukokuHorizon, bringing together people through shared interests and meaningful connections.</p>
     </div>
-    <div class="navigation">
+  </div>
+</section>
+
+<!-- Principle Section -->
+<section class="section" id="principle">
+  <div class="container">
+    <div class="section-header">
+      <h2>Principle</h2>
+      <p>HorizonVertical upholds three key principles that guide everything we do.</p>
+    </div>
+
+    <div class="principle-item">
+      <h3>Mission</h3>
+      <p><strong>To foster co-creation through horizontal and vertical connections.</strong></p>
+      <p>By bringing together people who share common interests, and combining their unique personalities and skills regardless of age, experience, or position, we create an environment where we can take on exciting and new challenges.</p>
+    </div>
+
+    <div class="principle-item">
+      <h3>Vision</h3>
+      <p><strong>To be an organization we can be proud of—both to our loved ones and to ourselves—and to continue being so.</strong></p>
+      <p>A group that is so meaningful and appealing that you can proudly say to your family, friends, and your future self, "I am a part of this organization."</p>
+    </div>
+
+    <div class="principle-item">
+      <h3>Value</h3>
+      <p><strong>Hyogeru – We embrace creativity and expressiveness with playfulness and boldness.</strong></p>
+      <p>Follow your heart without conforming to fixed forms, and freely pursue your own sense of 'suki'—your passions—or your ideals. And through taking on interesting challenges, cultivate your own sense of 'iki'—refined style and spirit.</p>
+      <p><strong>Mutual Support – We believe in give-and-take relationships, where everyone helps and is helped in turn.</strong></p>
+      <p>Rather than a one-sided relationship of dependence, we value a bond where both sides give and receive freely—an open, mutually beneficial give-and-take.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Notification & Blog Section -->
+<section class="section" id="notification">
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <h3>Notification</h3>
+        <p>Discover what's new with us. Stay updated with the latest announcements and news from HorizonVertical.</p>
+        <p><a href="{{ get_url(path='@/notification/_index.md') }}">View all notifications →</a></p>
+      </div>
+      <div class="card" id="blog">
+        <h3>Blog</h3>
+        <p>Discover our recent stories on the blog. Read about our activities, insights, and community updates.</p>
+        <p><a href="{{ get_url(path='@/blog/_index.md') }}">Read the blog →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>HorizonVertical</h3>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#principle">Principle</a></li>
-            <li><a href="#notification">Notification</a></li>
-            <li><a href="#blog">Blog</a></li>
+          <li><a href="/">Homepage</a></li>
+          <li><a href="mailto:contact@horizonvertical.org">Send email</a></li>
+          <li><a href="https://github.com/HorizonVertical">GitHub</a></li>
         </ul>
+      </div>
+      <div class="footer-col">
+        <h3>RyukokuHorizon</h3>
+        <ul>
+          <li><a href="https://www.ryukokuhorizon.dev">Homepage</a></li>
+          <li><a href="https://github.com/ryukoku-horizon">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#principle">Principle</a></li>
+          <li><a href="#notification">Notification</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
     </div>
-<div class="main">
-    <div id="about">
-        <h2>About</h2>
-        <p>
-            HorizonVertical is an organization for alumni and alumnea of RyukokuHorizon.
-        </p>
+    <div class="footer-bottom">
+      <p>© HorizonVertical. Fostering connections.</p>
     </div>
-    <div id="principle">
-        <h2>Principle</h2>
-        <p>HorizonVertical upholds three key principles.</p>
-        <h3>Mission</h3>
-        <p><strong>To foster co-creation through horizontal and vertical connections.</strong><br>By bringing together people who share common interests, and combining their unique personalities and skills regardless of age, experience, or position, we create an environment where we can take on exciting and new challenges.</p>
-        <h3>Vision</h3>
-        <p><strong>To be an organization we can be proud of—both to our loved ones and to ourselves—and to continue being so.</strong><br>A group that is so meaningful and appealing that you can proudly say to your family, friends, and your future self, 'I am a part of this organization.</p>
-        <h3>Value</h3>
-        <p><strong>Hyogeru – We embrace creativity and expressiveness with playfulness and boldness.</strong><br>Follow your heart without conforming to fixed forms, and freely pursue your own sense of 'suki'—your passions—or your ideals. And through taking on interesting challenges, cultivate your own sense of 'iki'—refined style and spirit.<br><strong>Mutual Support – We believe in give-and-take relationships, where everyone helps and is helped in turn.</strong>Rather than a one-sided relationship of dependence, we value a bond where both sides give and receive freely—an open, mutually beneficial give-and-take.</p>
-    </div>
-    <div id="notification">
-        <h2>Notification</h2>
-        <p>Discover what’s new with us.</p>
-        <p><a href="{{ get_url(path='@/notification/_index.md') }}">Check notifications</a>.</p>
-    </div>
-    <div id="blog">
-        <h2>Blog</h2>
-        <p>Discover our recent stories on the blog.</p>
-        <p><a href="{{ get_url(path='@/blog/_index.md') }}">Check blogs</a>.</p>
-    </div>
-</div>
-<div class="footer">
-    <h2>Contact and Links</h2>
-    <h3>HorizonVertical</h3>
-    <li><a href="https://www.horizonvertical.org">Homepage</a></li>
-    <li><a href="mailto:contact@horizonvertical.org">Send email</a></li>
-    <li><a href="https://github.com/HorizonVertical">GitHub Organization</a></li>
-    <h3>RyukokuHorizon</h3>
-    <li><a href="https://www.ryukokuhorizon.dev">Homepage</a></li>
-    <li><a href="https://github.com/ryukoku-horizon">GitHub Organization</a></li>
-</div>
+  </div>
+</footer>
 {% endblock content %}

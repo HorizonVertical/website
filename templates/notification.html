@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="logo"><a href="/">HorizonVertical</a></h1>
-<h2 class="title">
-  {{ section.title }}
-</h2>
-<ul>
-  <!-- If you are using pagination, section.pages will be empty.
-       You need to use the paginator object -->
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.date }}: {{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+<div class="content-page list-page">
+  <div class="logo"><a href="/">← HorizonVertical</a></div>
+  <h1 class="title">{{ section.title }}</h1>
+  <ul>
+    {% for page in section.pages %}
+    <li><a href="{{ page.permalink | safe }}"><span style="opacity: 0.6;">{{ page.date }} —</span> <strong>{{ page.title }}</strong></a></li>
+    {% endfor %}
+  </ul>
+</div>
 {% endblock content %}
